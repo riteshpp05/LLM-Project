@@ -2,8 +2,8 @@ import requests
 import os
 
 # Adzuna API credentials (better to store in environment variables)
-API_ID = os.getenv('ADZUNA_API_ID', '')  # Replace with your Adzuna API ID
-API_KEY = os.getenv('ADZUNA_API_KEY', '')  # Replace with your Adzuna API Key
+API_ID = os.getenv('ADZUNA_API_ID', 'a0cc19fa')  # Replace with your Adzuna API ID
+API_KEY = os.getenv('ADZUNA_API_KEY', '10f5af4d6533b94cbc85683f47db20b0')  # Replace with your Adzuna API Key
 
 def get_job_listings(location="Pune", job_title="Data Scientist"):
     url = "https://api.adzuna.com/v1/api/jobs/in/search/1"
@@ -22,3 +22,4 @@ def get_job_listings(location="Pune", job_title="Data Scientist"):
         return response.json()
     else:
         return None
+
